@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Умный дом</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    # Navigation menu text
+    <string name="nav_home">Home</string>
+    <string name="nav_statics">Statics</string>
+    <string name="nav_route">Routelines</string>
+    <string name="nav_settings">Settings</string>
+
+    # Settings text
+    <string name="fn">John</string>
+    <string name="sn">Steven</string>
+    <string name="email">test.email@mail.com</string>
+    <string name="password">12345</string>
+    <string name="signout">Sign out</string>
+
+    # Devices text
+    <string name="nav_light">Light</string>
+    <string name="nav_thermo">Thermostat</string>
+</resources>

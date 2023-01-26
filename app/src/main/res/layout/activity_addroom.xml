@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.AddroomActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/addroom_t"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#2A2A37"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/backbutton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#2A2A37"
+        android:foreground="?attr/actionModeCloseDrawable"
+        android:foregroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/addroom_t"
+        app:layout_constraintEnd_toStartOf="@+id/title_addroom"
+        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <TextView
+        android:id="@+id/title_addroom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add room"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/addroom_t"
+        app:layout_constraintEnd_toEndOf="@+id/addroom_t"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/addroom_t" />
+
+    <Button
+        android:id="@+id/savebutton"
+        android:layout_width="65dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#2A2A37"
+        android:text="SAV"
+        app:layout_constraintBottom_toBottomOf="@+id/addroom_t"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/title_addroom"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/en_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Enter Room's name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addroom_t" />
+
+    <EditText
+        android:id="@+id/nm_tv"
+        android:layout_width="370dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:drawable/editbox_background_normal"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="  Kitchen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/en_label" />
+
+    <TextView
+        android:id="@+id/sli_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Select room's icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nm_tv" />
+
+    <Button
+        android:id="@+id/kitchen_btn"
+        android:layout_width="99dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="65dp"
+        app:cornerRadius="500dp"
+        app:icon="@drawable/room1"
+        app:iconSize="66dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nm_tv" />
+
+    <TextView
+        android:id="@+id/textKitchenR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Kitchen"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/kitchen_btn"
+        app:layout_constraintStart_toStartOf="@+id/kitchen_btn"
+        app:layout_constraintTop_toBottomOf="@+id/kitchen_btn" />
+
+    <Button
+        android:id="@+id/bedroom_btn"
+        android:layout_width="99dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="65dp"
+        android:backgroundTint="#F0F0F0"
+        app:cornerRadius="500dp"
+        app:icon="@drawable/room2"
+        app:iconSize="66dp"
+        app:iconTint="#AFAFAF"
+        app:layout_constraintEnd_toStartOf="@+id/bathroom_btn"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toEndOf="@+id/kitchen_btn"
+        app:layout_constraintTop_toBottomOf="@+id/nm_tv" />
+
+    <TextView
+        android:id="@+id/textBedroomR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Bedroom"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/bedroom_btn"
+        app:layout_constraintStart_toStartOf="@+id/bedroom_btn"
+        app:layout_constraintTop_toBottomOf="@+id/bedroom_btn" />
+
+    <Button
+        android:id="@+id/bathroom_btn"
+        android:layout_width="99dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#F0F0F0"
+        app:cornerRadius="500dp"
+        app:icon="@drawable/room3"
+        app:iconSize="66dp"
+        app:iconTint="#AFAFAF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nm_tv" />
+
+    <TextView
+        android:id="@+id/textBathroomR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Bathroom"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/bathroom_btn"
+        app:layout_constraintStart_toStartOf="@+id/bathroom_btn"
+        app:layout_constraintTop_toBottomOf="@+id/bathroom_btn" />
+
+    <Button
+        android:id="@+id/office_btn"
+        android:layout_width="99dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="9dp"
+        android:backgroundTint="#F0F0F0"
+        app:cornerRadius="500dp"
+        app:icon="@drawable/room4"
+        app:iconSize="66dp"
+        app:iconTint="#AFAFAF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textKitchenR" />
+
+    <TextView
+        android:id="@+id/textOfficeR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Office"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/office_btn"
+        app:layout_constraintStart_toStartOf="@+id/office_btn"
+        app:layout_constraintTop_toBottomOf="@+id/office_btn" />
+
+    <Button
+        android:id="@+id/tv_btn"
+        android:layout_width="99dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="9dp"
+        android:backgroundTint="#F0F0F0"
+        app:cornerRadius="500dp"
+        app:icon="@drawable/room5"
+        app:iconSize="66dp"
+        app:iconTint="#AFAFAF"
+        app:layout_constraintEnd_toStartOf="@+id/living_btn"
+        app:layout_constraintStart_toEndOf="@+id/office_btn"
+        app:layout_constraintTop_toBottomOf="@+id/textBedroomR" />
+
+    <TextView
+        android:id="@+id/textTVR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="TV Room"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_btn"
+        app:layout_constraintStart_toStartOf="@+id/tv_btn"
+        app:layout_constraintTop_toBottomOf="@+id/tv_btn" />
+
+    <Button
+        android:id="@+id/living_btn"
+        android:layout_width="99dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#F0F0F0"
+        app:cornerRadius="500dp"
+        app:icon="@drawable/room6"
+        app:iconSize="66dp"
+        app:iconTint="#AFAFAF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textBathroomR" />
+
+    <TextView
+        android:id="@+id/textLVR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Living Room"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/living_btn"
+        app:layout_constraintStart_toStartOf="@+id/living_btn"
+        app:layout_constraintTop_toBottomOf="@+id/living_btn" />
+
+    <Button
+        android:id="@+id/garage_brn"
+        android:layout_width="99dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#F0F0F0"
+        app:cornerRadius="500dp"
+        app:icon="@drawable/room7"
+        app:iconSize="66dp"
+        app:iconTint="#AFAFAF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textOfficeR" />
+
+    <TextView
+            android:id="@+id/textGarageR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Garage"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/garage_brn"
+            app:layout_constraintStart_toStartOf="@+id/garage_brn"
+            app:layout_constraintTop_toBottomOf="@+id/garage_brn" />
+
+    <Button
+        android:id="@+id/toilet_btn"
+        android:layout_width="99dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="13dp"
+        android:backgroundTint="#F0F0F0"
+        app:cornerRadius="500dp"
+        app:icon="@drawable/room8"
+        app:iconSize="66dp"
+        app:iconTint="#AFAFAF"
+        app:layout_constraintEnd_toStartOf="@+id/kid_btn"
+        app:layout_constraintStart_toEndOf="@+id/garage_brn"
+        app:layout_constraintTop_toBottomOf="@+id/textTVR" />
+
+        <TextView
+            android:id="@+id/textToiletR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Toilet"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/toilet_btn"
+            app:layout_constraintStart_toStartOf="@+id/toilet_btn"
+            app:layout_constraintTop_toBottomOf="@+id/toilet_btn" />
+
+    <Button
+        android:id="@+id/kid_btn"
+        android:layout_width="99dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#F0F0F0"
+        app:cornerRadius="500dp"
+        app:icon="@drawable/room9"
+        app:iconSize="66dp"
+        app:iconTint="#AFAFAF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLVR" />
+
+    <TextView
+            android:id="@+id/textKidRoomR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Kid Room"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/kid_btn"
+            app:layout_constraintStart_toStartOf="@+id/kid_btn"
+            app:layout_constraintTop_toBottomOf="@+id/kid_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

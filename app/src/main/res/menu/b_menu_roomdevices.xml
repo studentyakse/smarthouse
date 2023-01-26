@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_light"
+        android:icon="@drawable/main_image"
+        android:title="@string/nav_light" />
+
+    <item
+        android:id="@+id/nav_thermo"
+        android:icon="@drawable/statics_image"
+        android:title="@string/nav_thermo" />
+</menu>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/t"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.ThermoFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/t_thermo_tb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#2A2A37"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/t_thermo_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="36dp"
+            android:text="Thermostat"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/switch1"
+            app:layout_constraintHorizontal_bias="0.005"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/t_thermo_tb" />
+
+        <me.tankery.lib.circularseekbar.CircularSeekBar
+            android:id="@+id/t_thermo_regt"
+            android:layout_width="334dp"
+            android:layout_height="312dp"
+            android:layout_marginStart="252dp"
+            app:cs_circle_color="#5e55a0"
+            app:cs_circle_progress_color="#5e55a0"
+            app:cs_circle_stroke_width="5dp"
+            app:cs_pointer_color="#5e55a0"
+            app:cs_pointer_stroke_width="20dp"
+            app:cs_progress="40"
+            app:cs_start_angle="90"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/t_thermo_tb"
+            app:layout_constraintVertical_bias="0.482" />
+
+        <ImageView
+            android:id="@+id/t_thermo_i_r"
+            android:layout_width="255dp"
+            android:layout_height="329dp"
+            android:layout_marginStart="200dp"
+            android:src="@drawable/thermo_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/t_thermo_tb"
+            app:layout_constraintVertical_bias="0.485" />
+
+        <TextView
+            android:id="@+id/t_thermo_degrees"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="220dp"
+            android:text="30"
+            android:textColor="#5e55a0"
+            android:textSize="65sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.139"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/t_thermo_tb" />
+
+        <TextView
+            android:id="@+id/t_thermo_mark"
+            android:layout_width="35dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="8dp"
+            android:text="°"
+            android:textSize="60sp"
+            app:layout_constraintBottom_toBottomOf="@+id/t_thermo_degrees"
+            app:layout_constraintStart_toEndOf="@+id/t_thermo_degrees"
+            app:layout_constraintTop_toTopOf="@+id/t_thermo_degrees"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/t_thermo_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temperature, °C"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/t_thermo_degrees"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/t_thermo_degrees"
+            app:layout_constraintTop_toBottomOf="@+id/t_thermo_degrees" />
+
+        <TextView
+            android:id="@+id/t_thermo_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kitchen"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/t_thermo_title"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/t_thermo_title"
+            app:layout_constraintTop_toBottomOf="@+id/t_thermo_title" />
+
+        <SeekBar
+            android:id="@+id/t_fan_bar"
+            android:layout_width="310dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="32dp"
+            android:progressBackgroundTint="#5e55a0"
+            android:thumbTint="#5e55a0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/t_thermo_tb"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/t_thermo_i_fan"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:src="@drawable/fan_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/t_fan_bar"
+            app:layout_constraintStart_toEndOf="@+id/t_fan_bar"
+            app:layout_constraintTop_toTopOf="@+id/t_fan_bar"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="36dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/t_thermo_tb" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kitchen"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/t_thermo_tb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/t_thermo_tb"
+            app:layout_constraintTop_toTopOf="@+id/t_thermo_tb" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="?attr/actionModeCloseDrawable"
+            android:foreground="?attr/actionModeCloseDrawable"
+            android:foregroundTint="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/t_thermo_tb"
+            app:layout_constraintEnd_toStartOf="@+id/textView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/t_thermo_tb"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

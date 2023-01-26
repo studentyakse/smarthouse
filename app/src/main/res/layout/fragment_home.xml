@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Fragments.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="414dp"
+            android:layout_height="56dp"
+            android:backgroundTint="#2A2A37"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
+            app:tabIconTint="@color/dark"
+            app:tabTextColor="#FFFFFF">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Room"
+                tools:layout_editor_absoluteX="-1dp"
+                tools:layout_editor_absoluteY="304dp" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                tools:layout_editor_absoluteX="137dp"
+                tools:layout_editor_absoluteY="304dp" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </com.google.android.material.tabs.TabLayout>
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/materialToolbar"
+            android:layout_width="413dp"
+            android:layout_height="115dp"
+            android:background="?attr/colorPrimary"
+            android:backgroundTint="#2A2A37"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/geo_icon"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="76dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_geo" />
+
+        <TextView
+            android:id="@+id/homename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Your home"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.054"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/addroom"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/add_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/geo_btn"
+            android:layout_width="312dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="70dp"
+            android:background="@android:color/transparent"
+            android:text="677000, Yakutsk, Kurashova, 22, Sakhatelecom"
+            android:textSize="9sp"
+            app:layout_constraintEnd_toEndOf="@+id/materialToolbar"
+            app:layout_constraintHorizontal_bias="0.158"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/materialToolbar" />
+
+        <Button
+            android:id="@+id/room_1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:text="Kitchen"
+            android:textAllCaps="true"
+            app:icon="@drawable/kitchen"
+            app:iconGravity="textTop"
+            app:iconSize="80dp"
+            app:iconTint="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
+        <Button
+            android:id="@+id/room_2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:text="Living Room"
+            app:icon="@drawable/livingroom"
+            app:iconGravity="textTop"
+            app:iconSize="80dp"
+            app:iconTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
+        <Button
+            android:id="@+id/room_3"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:text="Computer"
+            android:textAllCaps="true"
+            app:icon="@drawable/room4"
+            app:iconGravity="textTop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/room_1" />
+
+        <Button
+            android:id="@+id/room_4"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:text="TV room"
+            android:textAllCaps="true"
+            app:icon="@drawable/room5"
+            app:iconGravity="textTop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/room_2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
